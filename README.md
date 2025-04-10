@@ -36,7 +36,9 @@ original trajectory.
 **Dependencies** : Python3, Numpy, MDAnalysis
 
 **Usage** : > python 1-pairwise_distances.py -i INPUT_FILE [-s SELECTION]
-    where,
+
+where,
+    
     -i, --inputfile INPUT_FILE : is the name of your properly formatted input file.
 
     -s, --selection SELECTION : is the selection command to establish atom group for pairwise distance calculations. (Default: "(protein and name CA) or (name BB)")
@@ -97,14 +99,13 @@ don't have to be recalculated). The outputs are as follows:
                                 column of the cluster number to which each frame belongs (will
                                 match the ID file written from 1-pairwise_distances.py)
 
-**Dependencies** : Julia - Julia 1.6.2+, StatsPlots, Clustering, DelimitedFiles, LinearAlgebra, Distances, ProgressMeter, Statistics, JLD, Argparse, PyPlot, NPZ
-                       ** These can easily be installed from the Julia Pkg REPL
-               
-		   Python - Python3, Matplotlib
-                       ** These are required for the PyPlot Julia Package to work
+**Dependencies** : Julia - Julia 1.6.2+, StatsPlots, Clustering, DelimitedFiles, LinearAlgebra, Distances, ProgressMeter, Statistics, JLD, Argparse, PyPlot, NPZ. *These can easily be installed from the Julia Pkg REPL*
+
+Python - Python3, Matplotlib. *These are required for the PyPlot Julia Package to work*.
 
 **Usage** : > julia 2-cluster.jl [-k NCLUSTERS] [-l MINCHECK] [-u MAXCHECK] [-d] [-h]
-          where,
+
+where,
 
           -k, --nclusters NCLUSTERS : number of clusters (0 will cause silhouette score to be calculated and determine the optimal number of clusters)(type: Int64, default: 0)
 
@@ -130,7 +131,7 @@ Individual trajectories will be written for each cluster and each trajectory typ
 
 **Usage** : > python 3-results.py -i INPUT_FILE
 
-        where,
+where,
 
         -i, --inputfile INPUT_FILE : is the same inputfile you specified with 1-pairwise_distances.py
 
